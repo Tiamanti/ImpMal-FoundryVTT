@@ -17,7 +17,8 @@ export class ChoiceOptionForm extends FormApplication
         this.object.option = foundry.utils.deepClone(this.object.choices.options[this.object.index]);
     }
 
-    getData() {
+    getData() 
+    {
         let data = super.getData();
         return data;
     }
