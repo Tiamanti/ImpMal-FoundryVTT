@@ -85,7 +85,7 @@ export class TestDialog extends Application
         this.flags = {};
 
         Hooks.call("impmal:createRollDialog", this);
-        data.scripts = data.scripts.concat(this._createScripts(this.options.scripts))
+        data.scripts = data.scripts.concat(this._createScripts(this.options.scripts));
 
         if (resolve)
         {
@@ -275,7 +275,7 @@ export class TestDialog extends Application
                     hideScript : i.hide, 
                     activateScript : i.activate, 
                     submissionScript : i.submit}}}),
-            ImpMalScript.createContext(this.item instanceof Item ? this.item : this.actor)))
+        ImpMalScript.createContext(this.item instanceof Item ? this.item : this.actor)));
     }
 
 
@@ -455,7 +455,7 @@ export class TestDialog extends Application
         dialogData.data.context = options.context || {}; // Arbitrary values - used with scripts
         dialogData.data.context.tags = options.context?.tags || {}; // Tags shown below test results - used with scripts
         dialogData.data.context.text = options.context?.text || {}; // Longer text shown below test results - used with scripts
-        dialogData.data.context.skipTargets = options.skipTargets
+        dialogData.data.context.skipTargets = options.skipTargets;
         if (actor && !actor?.token)
         {
             // getSpeaker retrieves tokens even if this sheet isn't a token's sheet
@@ -486,7 +486,7 @@ export class TestDialog extends Application
         }
         else 
         {
-            dialogData.data.scripts = actor?.getScripts("dialog", (s) => !s.options.dialog?.targeter) // Don't use our own targeter dialog effects
+            dialogData.data.scripts = actor?.getScripts("dialog", (s) => !s.options.dialog?.targeter); // Don't use our own targeter dialog effects
         }
 
 

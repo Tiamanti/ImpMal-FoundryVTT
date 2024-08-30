@@ -1,14 +1,14 @@
 import fs from "fs";
 
-let path = "./scripts/"
+let path = "./scripts/";
 let scripts = fs.readdirSync(path);
 let count = 0;
 let scriptObj = {};
 for(let file of scripts)
 {
-  let script = fs.readFileSync(path + file, {encoding:"utf8"});
-  scriptObj[file.split(".")[0]] = script;
-  count++;
+    let script = fs.readFileSync(path + file, {encoding:"utf8"});
+    scriptObj[file.split(".")[0]] = script;
+    count++;
 }
 
 let scriptLoader = `export default function() 
@@ -18,7 +18,7 @@ let scriptLoader = `export default function()
         mergeObject(game.impmal.config.effectScripts, ${JSON.stringify(scriptObj)});
     });
 
-}`
+}`;
 
-fs.writeFileSync("./loadScripts.js", scriptLoader)
+fs.writeFileSync("./loadScripts.js", scriptLoader);
 console.log(`Packed ${count} scripts`);

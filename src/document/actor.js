@@ -109,7 +109,7 @@ export class ImpMalActor extends ImpMalDocumentMixin(Actor)
         let setupData;
         if (options.skipDialog)
         {
-            setupData = await (new dialogClass(dialogData.data, dialogData.fields).bypass())
+            setupData = await (new dialogClass(dialogData.data, dialogData.fields).bypass());
         }
         else
         {
