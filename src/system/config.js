@@ -816,7 +816,23 @@ const IMPMAL = {
     },
 
     traitEffects : {
-       
+       loud: {
+           name: "IMPMAL.Loud",
+           system: {
+               transferData : {
+                   documentType: "Actor"
+               },
+               scriptData : [{
+                   label : "Disadvantage when Wearing Armour with Loud trait",
+                   trigger : "dialog",
+                   script : "args.disadvantage++;",
+                   options : {
+                       hideScript : "return args.data.skill !== 'stealth' || !args.data.actor.itemTypes.equipped.protection.find(i => i.system.traits.list.find(i => i.key == 'loud'))",
+                       activateScript : "return true;"
+                   }
+               }]
+           }
+       },
        defensive: {
            name : "IMPMAL.Defensive",
            system : {
@@ -834,7 +850,7 @@ const IMPMAL = {
                }]
            }
        },
-        burst: {
+        shoddy: {
             name : "IMPMAL.Shoddy",
             system : {
                 transferData : {
