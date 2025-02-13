@@ -820,7 +820,8 @@ const IMPMAL = {
            name: "IMPMAL.Loud",
            system: {
                transferData : {
-                   documentType: "Actor"
+                   documentType: "Actor",
+                   equipTransfer : true,
                },
                scriptData : [{
                    label : "Disadvantage when Wearing Armour with Loud trait",
