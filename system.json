@@ -3,7 +3,7 @@
   "name" : "impmal",
   "title": "Warhammer 40,000: Imperium Maledictum",
   "description": "In the grim darkness of the 41st millennium, players take on the role of citizens of the Imperium in service to a powerful patron, drawing them into tales focused on intrigue, betrayal, and conspiracy",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "compatibility" : {
     "minimum" : 12,
     "verified" : 12,
